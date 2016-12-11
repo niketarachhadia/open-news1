@@ -32,7 +32,10 @@ var fetchAndRenderCategoryFeeds = function(category) {
 
 var onFeedSuccess = function(result) {
   var newsDataList = result.value;
-
+  if(result.value.length>0){
+	  var newCategory=result.value[0].category;
+	  fetchAndNavigateTrendingNews(newCategory);
+  }
   $.each(newsDataList, function(i, newsDataListItem) {
     var newsItemDOM = getNewsItemDOM(newsDataListItem);
     $('#list').append(newsItemDOM);

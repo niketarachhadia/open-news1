@@ -32,7 +32,18 @@ var fetchAndNavigateTrendingNews = function(query){
 };
 var onTrendingSuccess = function(result){
       var videoList = result.items;
-      $('#video').attr('src', 'https://www.youtube.com/embed/'+videoList[0].id.videoId+'?autoplay=1&loop=1&rel=0&wmode=transparent" frameborder="0" allowfullscreen wmode="Opaque"');
+	  var videoId=0;
+	  for(index in videoList){
+		  if(videoList[index].id.videoId){
+			  videoId=videoList[index].id.videoId;
+			  break;
+		  }
+	  }
+	  
+	  if(videoId){
+		  $('#video').attr('src', 'https://www.youtube.com/embed/'+videoId+'?autoplay=0&loop=1&rel=0&wmode=transparent" frameborder="0" allowfullscreen wmode="Opaque"');
+	  }
+      
 };
 var onTrendingFailure = function(jqXHR, error){
     var errorElem = showError(error);
