@@ -34,6 +34,9 @@ var onFeedSuccess = function(result) {
   var newsDataList = result.value;
   if(result.value.length>0){
 	  var newCategory=result.value[0].category+' News';
+	  if(result.value[0].category=='US'){
+		  newCategory='Top US-World headlines';
+	  }
 	  fetchAndNavigateTrendingNews(newCategory);
   }
   $.each(newsDataList, function(i, newsDataListItem) {
