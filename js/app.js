@@ -17,4 +17,6 @@ $(document).ready( function() {
     fetchAndRenderCategoryFeeds('US');
     $('.search-button').click(onSearch);
     $('.navigation').click(onNavigation);
+	$("body").css("overflow", "hidden");
+	$("body").css("overflow", "auto");
 });
