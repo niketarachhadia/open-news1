@@ -11,23 +11,28 @@ body{
 header{
   background-color: #FF7F50;
 }
-
+.logo{
+	text-align:center;
+}
 .navigation,.search{
     margin-top: 20px;
     margin-right:0px;
   }
 search input{
-
-  width: 150px;
   font-size: 14px;
   font-weight: 500;
   line-height:30px;
   height: 30px;
+  width: 50px;
   background-color: white;
   border: 1 px solid gray;
   border-radius: 3px;
-  padding: 0 5px 0 8px;
 }
+input[type="search"] 
+      {
+         width: 80%;
+         border: 1px solid #CCC;
+      }
 .search button{
   display:inline-block;
   height: 25px;
@@ -36,13 +41,53 @@ search input{
   border-radius: 3px;
   border: 1 px solid gray;
 }
-.navigation a{
-  font-size: 14px;
-  color : white;
-  padding-left: 5px;
-  padding-right: 5px;
+ul.topnav {
+	list-style-type: none;
+}
+ul.topnav li {
+	float: left;
+}
+ul.topnav li+li {
+	border-left:solid 1px #fff;
+}
+ul.topnav li:last { border-left: none }
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 3px 3px;
   text-decoration: none;
-  text-align: right;
+  transition: 0.3s;
+  font-size: 17px;
+}
+ul.topnav li.icon {
+	display: none;
+	border-left: none;
+}
+@media screen and (max-width:680px) {
+  ul.topnav li{
+	display: none;
+	border-left: none;
+  }
+  ul.topnav li.icon {
+    float: center;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+	 border-left: none;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
 }
 .description{
   margin-top: 0px;

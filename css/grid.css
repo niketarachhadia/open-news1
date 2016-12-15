@@ -2,9 +2,7 @@
   box-sizing: border-box;
 }
 .row{
-  max-width: 1200px;
-  padding-left: 20px;
-  
+  max-width: 1200px;  
   margin: 0 auto;
 }
 
@@ -29,7 +27,6 @@
    *
    */
   padding-left: 1.04166666%;
-  padding-right: 1.04166666%;
 }
 
 /* Mobile defaults */
