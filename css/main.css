@@ -13,6 +13,8 @@ header{
 }
 .logo{
 	text-align:center;
+	font-size: 17px;
+	font-weight:bold;
 }
 .navigation,.search{
     margin-top: 20px;
@@ -31,7 +33,13 @@ search input{
 input[type="search"] 
       {
          width: 80%;
-         border: 1px solid #CCC;
+         font-size: 14px;
+		  font-weight: 500;
+		  line-height:25px;
+		  height: 25px;
+		  background-color: white;
+		  border: 1 px solid gray;
+		  border-radius: 3px;
       }
 .search button{
   display:inline-block;
@@ -46,43 +54,41 @@ ul.topnav {
 }
 ul.topnav li {
 	float: left;
+	padding-left: 15px;
 }
-ul.topnav li+li {
-	border-left:solid 1px #fff;
-}
+
 ul.topnav li:last { border-left: none }
 
 ul.topnav li a {
   display: inline-block;
   color: #f2f2f2;
   text-align: center;
-  padding: 3px 3px;
   text-decoration: none;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 14px;
 }
 ul.topnav li.icon {
 	display: none;
 	border-left: none;
 }
 @media screen and (max-width:680px) {
-  ul.topnav li{
-	display: none;
-	border-left: none;
-  }
+  ul.topnav li:not(:first-child) {display: none;}
   ul.topnav li.icon {
-    float: center;
+    float: left;
     display: inline-block;
+	font-size: 17px;
+	font-weight:bold;
   }
 }
 
 @media screen and (max-width:680px) {
   ul.topnav.responsive {position: relative;}
-  
+  ul.topnav.responsive li.icon {
+    position: absolute;
+  }
   ul.topnav.responsive li {
     float: none;
     display: inline;
-	 border-left: none;
   }
   ul.topnav.responsive li a {
     display: block;
