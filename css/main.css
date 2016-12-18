@@ -134,7 +134,9 @@ main {
 main .row {
   margin-bottom: 20px;
 }
-
+.row{
+	padding-bottom:15px;
+}
 
 .trending, .feed-list{
   height: 550px;
